@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkenderPay - Coming Soon</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #000033, #330033);
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        form {
+            display: flex;
+            gap: 10px;
+        }
+        input, button {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            width: 250px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+        button {
+            background: #ff00ff;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #cc00cc;
+        }
+        .stars {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            background: white;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SkenderPay</h1>
+        <p>The future of crypto payments is coming soon. Be the first to know when we launch!</p>
+        <form id="email-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Notify Me</button>
+        </form>
+    </div>
+    <script>
+        // Create stars
+        for (let i = 0; i < 100; i++) {
+            let star = document.createElement('div');
+            star.className = 'stars';
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            document.body.appendChild(star);
+        }
+
+        // Form submission (replace with actual submission logic)
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We\'ll notify you when SkenderPay launches.');
+        });
+    </script>
+</body>
+</html>
+
+
